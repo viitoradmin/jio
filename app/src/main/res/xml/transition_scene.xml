@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+        app:constraintSetStart="@id/stepOne"
+        app:constraintSetEnd="@id/stepTwo"
+        app:duration="400">
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/stepOne">
+
+        <Constraint
+            android:id="@+id/ivBubble"
+            android:layout_width="@dimen/onboarding_bubble_size_step_one"
+            android:layout_height="@dimen/onboarding_bubble_size_step_one"
+            android:backgroundTint="@color/bubbleCollapseColor"
+            android:background="@drawable/bubble_background"
+            app:layout_constraintCircle="@+id/clSpec"
+            app:layout_constraintCircleAngle="30"
+            app:layout_constraintCircleRadius="@dimen/_70sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+        <Constraint android:id="@+id/clDevices">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+        <Constraint android:id="@+id/tvDeviceStatus">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/stepTwo">
+
+        <Constraint
+            android:id="@+id/ivBubble"
+            android:layout_width="@dimen/onboarding_bubble_size_step_two"
+            android:layout_height="@dimen/onboarding_bubble_size_step_two"
+            android:backgroundTint="@color/bubbleExpandColor"
+            android:background="@drawable/bubble_background"
+            app:layout_constraintCircle="@+id/centerImage"
+            app:layout_constraintCircleAngle="5"
+            app:layout_constraintCircleRadius="@dimen/_320sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+        <Constraint android:id="@+id/clDevices">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@+id/tvDeviceStatus">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+
+    </ConstraintSet>
+</MotionScene>

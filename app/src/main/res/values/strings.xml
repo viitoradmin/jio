@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JioGlass</string>
+    <string name="lbl_device_status_assets">Device status assets</string>
+    <string name="lbl_device_status">Devices status</string>
+    <string name="lbl_add_device">Add Device</string>
+    <string name="lbl_jio_glass">JioGlass</string>
+    <string name="lbl_controller">Controller</string>
+    <string name="lbl_connected">Connected</string>
+    <string name="lbl_connecting">Connecting..</string>
+</resources>

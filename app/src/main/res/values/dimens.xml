@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="onboarding_bubble_size_step_one">@dimen/_200sdp</dimen>
+    <dimen name="onboarding_bubble_size_step_two">@dimen/_600sdp</dimen>
+
+
+    <dimen name="text_10">@dimen/_10ssp</dimen>
+    <dimen name="text_12">@dimen/_12ssp</dimen>
+    <dimen name="text_14">@dimen/_14ssp</dimen>
+
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/m"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/onboarding_bubble_size_step_two"
+        android:layout_height="@dimen/onboarding_bubble_size_step_two"
+        android:backgroundTint="@color/bubbleCollapseColor"
+        android:background="@drawable/bubble_background"
+        app:layout_constraintCircle="@+id/centerImage"
+        app:layout_constraintCircleAngle="20"
+        android:id="@+id/ivBubble"
+        app:layout_constraintCircleRadius="@dimen/_320sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/onboarding_bubble_size_step_one"
+        android:layout_height="@dimen/onboarding_bubble_size_step_one"
+        android:backgroundTint="@color/jioTypeGrey"
+        android:background="@drawable/bubble_background"
+        app:layout_constraintCircle="@+id/clSpec"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="@dimen/_70sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/centerImage"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+   <!-- <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clController"
+        android:id="@+id/clSpec"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/clController"
+        app:layout_constraintStart_toStartOf="@+id/clController"
+        app:layout_constraintEnd_toEndOf="@+id/clController"
+        app:layout_constraintBottom_toBottomOf="@+id/clController"
+        android:id="@+id/clSpec"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/ivSpec"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/device_spec"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:id="@+id/ivRedDot"
+            app:srcCompat="@drawable/red_dot"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/ivSpec"
+            app:layout_constraintEnd_toEndOf="@id/ivSpec"
+            app:layout_constraintBottom_toBottomOf="@id/ivSpec"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/clController"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/ivController"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/device_controller"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:id="@+id/ivBlueDot"
+            app:srcCompat="@drawable/blue_dot"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/ivController"
+            app:layout_constraintEnd_toEndOf="@id/ivController"
+            app:layout_constraintBottom_toBottomOf="@id/ivController"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/clDevices"
+        app:layout_constraintTop_toBottomOf="@+id/clController"
+        tools:layout_editor_absoluteX="13dp">
+
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddDevice"
+            style="@style/jioTypeBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_add_device"
+            app:layout_constraintEnd_toStartOf="@+id/tvJioGlass"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJioGlass"
+            style="@style/jioTypeBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_jio_glass"
+            app:layout_constraintEnd_toStartOf="@+id/tvController"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvAddDevice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvController"
+            style="@style/jioTypeBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_controller"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvJioGlass"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAddDevice"
+            app:layout_constraintStart_toStartOf="@+id/tvAddDevice"
+            app:layout_constraintTop_toBottomOf="@id/tvAddDevice"
+            app:srcCompat="@drawable/add_device" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/ivJioGlass"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvJioGlass"
+            app:layout_constraintStart_toStartOf="@+id/tvJioGlass"
+            app:layout_constraintTop_toBottomOf="@id/tvJioGlass"
+            app:srcCompat="@drawable/jio_glass" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/ivControllerBig"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvController"
+            app:layout_constraintStart_toStartOf="@+id/tvController"
+            app:layout_constraintTop_toBottomOf="@id/tvController"
+            app:srcCompat="@drawable/controller_big" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintCircle="@+id/ivControllerBig"
+            app:layout_constraintCircleAngle="360"
+            app:layout_constraintCircleRadius="@dimen/_30sdp"
+            app:srcCompat="@drawable/battery"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/connected"
+            android:id="@+id/ivConnected"
+            app:layout_constraintCircleRadius="@dimen/_40sdp"
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircle="@+id/ivControllerBig"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/jioTypeLightBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_connected"
+            app:layout_constraintEnd_toEndOf="@+id/ivControllerBig"
+            app:layout_constraintStart_toStartOf="@+id/ivControllerBig"
+            app:layout_constraintTop_toBottomOf="@+id/ivConnected" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/connecting"
+            android:id="@+id/ivConnecting"
+            app:layout_constraintCircleRadius="@dimen/_40sdp"
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircle="@+id/ivJioGlass"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/jioTypeLightBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_connected"
+            app:layout_constraintEnd_toEndOf="@+id/ivJioGlass"
+            app:layout_constraintStart_toStartOf="@+id/ivJioGlass"
+            app:layout_constraintTop_toBottomOf="@+id/ivConnecting" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
