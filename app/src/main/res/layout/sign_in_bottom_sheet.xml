@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        style="@style/DialogStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heyTxtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="@string/hey"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/dimen_28sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/signInPromptTxtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="@string/sign_in_prompt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/heyTxtV" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailIdTxtInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:theme="@style/HintTextStyle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailIdEditTxt"
+                        style="@style/EditTextBottomLineStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_id"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordTxtInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:theme="@style/HintTextStyle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEditTxt"
+                        style="@style/EditTextBottomLineStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        tools:targetApi="o" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/forgotPasswordTxtV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/login_input_grey"
+                    android:textSize="@dimen/dimen_14sp" />
+
+<!--                <com.google.android.material.progressindicator.ProgressIndicator-->
+<!--                    android:id="@+id/progress_circular"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:progress="70"-->
+<!--                    style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"-->
+<!--                    />-->
+
+                <View
+                    android:id="@+id/dividerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="#E6E6E6" />
+
+
+                <Button
+                    android:id="@+id/signInBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/circular_button_shape"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:text="@string/sign_in"
+                    android:textSize="@dimen/dimen_16sp" />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>
