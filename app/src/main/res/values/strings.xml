@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Jio Glass</string>
+
+    <!--Login-->
+    <string name="hey">Hey!</string>
+    <string name="lets_get_you_signed_in_you_first">Let\'s get you signed in first</string>
+    <string name="email">Email ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="incorrect_mail_id">Incoorect mail ID</string>
+    <string name="incorrect_password">Incoorect password</string>
+
+
+    <!--Home Screen-->
+    <string name="hello_rahul">Hello! Rahul</string>
+
+    <string name="jio_cinema">Jio Cinema</string>
+    <string name="jio_tv">Jio TV</string>
+    <string name="jio_saavn">Jio Saavn</string>
+    <string name="ar_vidhya">AR Vidhya</string>
+    <string name="jio_meet">Jio Meet</string>
+    <string name="reliance_digital">Reliance Digital</string>
+    <string name="jio_mart">Jio Mart</string>
+    <string name="hamleys">Hamleys</string>
+    <string name="armani">Armani</string>
+    <string name="espn">ESPN</string>
+    <string name="byju">Byju\'s Classroom</string>
+
+</resources>

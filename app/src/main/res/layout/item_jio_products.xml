@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="@dimen/spacing_micro"
+    android:layout_marginBottom="@dimen/spacing_micro"
+    android:layout_marginStart="@dimen/two_dp"
+    android:layout_marginEnd="@dimen/two_dp"
+    android:orientation="vertical">
+
+    <com.jio.glass.widgets.CircularImageView
+        android:id="@+id/civProductLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jio_cinema"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/atvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:gravity="center_horizontal"
+        android:minLines="2"
+        android:text="@string/forgot_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/light_gray"
+        tools:text="Reliance Digital"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

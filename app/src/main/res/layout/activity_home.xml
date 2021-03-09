@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/padding_normal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/padding_normal" />
+
+    <com.jio.glass.widgets.CircularImageView
+        android:id="@+id/civProfile"
+        android:layout_width="@dimen/avatar_bounds"
+        android:layout_height="@dimen/avatar_bounds"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/atvLets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_normal"
+        android:text="@string/lets_get_you_signed_in_you_first"
+        android:textAppearance="@style/JioTypeMedium"
+        app:layout_constraintBottom_toBottomOf="@+id/civProfile"
+        app:layout_constraintStart_toEndOf="@+id/civProfile"
+        app:layout_constraintTop_toTopOf="@+id/civProfile" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvSearch"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_xlarge"
+        android:layout_marginTop="@dimen/padding_normal"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/padding_large"
+        app:cardElevation="@dimen/spacing_normal"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/civProfile">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/aivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_search_24" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toTopOf="@+id/mcvSearch">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llcLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/spaceTop"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_huge"
+                android:layout_gravity="center_horizontal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:itemCount="20"
+                tools:listitem="@layout/item_jio_products"
+                />
+
+            <androidx.legacy.widget.Space
+                android:id="@+id/spaceBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
