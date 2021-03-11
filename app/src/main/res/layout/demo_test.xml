@@ -5,33 +5,32 @@
     android:id="@+id/m"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/blueText">
 
-
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="@dimen/onboarding_bubble_size_step_two"
-        android:layout_height="@dimen/onboarding_bubble_size_step_two"
-        android:backgroundTint="@color/bubbleCollapseColor"
-        android:background="@drawable/bubble_background"
-        app:layout_constraintCircle="@+id/centerImage"
-        app:layout_constraintCircleAngle="20"
-        android:id="@+id/ivBubble"
-        app:layout_constraintCircleRadius="@dimen/_320sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="@dimen/onboarding_bubble_size_step_one"
         android:layout_height="@dimen/onboarding_bubble_size_step_one"
-        android:backgroundTint="@color/jioTypeGrey"
+        android:backgroundTint="@color/bubbleCollapseColor"
         android:background="@drawable/bubble_background"
         app:layout_constraintCircle="@+id/clSpec"
         app:layout_constraintCircleAngle="30"
         app:layout_constraintCircleRadius="@dimen/_70sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/onboarding_bubble_size_step_one"
+        android:layout_height="@dimen/onboarding_bubble_size_step_one"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/bubble_background"
+        app:layout_constraintCircle="@+id/clSpec"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="@dimen/_90sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
 
@@ -45,90 +44,84 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-   <!-- <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/clController"
-        android:id="@+id/clSpec"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_height="wrap_content">-->
+    <!-- <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="wrap_content"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintEnd_toStartOf="@+id/clController"
+         android:id="@+id/clSpec"
+         android:layout_marginTop="@dimen/_5sdp"
+         android:layout_height="wrap_content">-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSpec"
         android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/clController"
-        app:layout_constraintStart_toStartOf="@+id/clController"
-        app:layout_constraintEnd_toEndOf="@+id/clController"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="@+id/clController"
-        android:id="@+id/clSpec"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_height="wrap_content">
+        app:layout_constraintEnd_toEndOf="@+id/clController"
+        app:layout_constraintStart_toStartOf="@+id/clController"
+        app:layout_constraintTop_toTopOf="@+id/clController">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
             android:id="@+id/ivSpec"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/device_spec"
-            android:layout_height="wrap_content"/>
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="0dp"
-            android:id="@+id/ivRedDot"
-            app:srcCompat="@drawable/red_dot"
-            android:layout_marginBottom="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="@id/ivSpec"
-            app:layout_constraintEnd_toEndOf="@id/ivSpec"
-            app:layout_constraintBottom_toBottomOf="@id/ivSpec"
-            android:layout_height="wrap_content"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/clController"
-        android:layout_height="0dp">
-
-        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
-            android:id="@+id/ivController"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/device_spec"
             app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/device_controller"
-            android:layout_height="wrap_content"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRedDot"
             android:layout_width="0dp"
-            android:id="@+id/ivBlueDot"
-            app:srcCompat="@drawable/blue_dot"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="@id/ivController"
-            app:layout_constraintEnd_toEndOf="@id/ivController"
+            app:layout_constraintBottom_toBottomOf="@id/ivSpec"
+            app:layout_constraintEnd_toEndOf="@id/ivSpec"
+            app:layout_constraintStart_toStartOf="@id/ivSpec"
+            app:srcCompat="@drawable/red_dot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clController"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivController"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/device_controller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBlueDot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="@id/ivController"
-            android:layout_height="wrap_content"/>
-
-
+            app:layout_constraintEnd_toEndOf="@id/ivController"
+            app:layout_constraintStart_toStartOf="@id/ivController"
+            app:srcCompat="@drawable/blue_dot" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDevices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
-        android:id="@+id/clDevices"
         app:layout_constraintTop_toBottomOf="@+id/clController"
         tools:layout_editor_absoluteX="13dp">
-
-
-
-
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -177,8 +170,8 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
             android:id="@+id/ivJioGlass"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/tvJioGlass"
@@ -188,8 +181,8 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
             android:id="@+id/ivControllerBig"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/tvController"
@@ -211,13 +204,13 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/connected"
             android:id="@+id/ivConnected"
-            app:layout_constraintCircleRadius="@dimen/_40sdp"
-            app:layout_constraintCircleAngle="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintCircle="@+id/ivControllerBig"
-            android:layout_height="wrap_content"/>
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircleRadius="@dimen/_40sdp"
+            app:srcCompat="@drawable/connected" />
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -231,14 +224,13 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            app:srcCompat="@drawable/connecting"
             android:id="@+id/ivConnecting"
-            app:layout_constraintCircleRadius="@dimen/_40sdp"
-            app:layout_constraintCircleAngle="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintCircle="@+id/ivJioGlass"
-            android:layout_height="wrap_content"/>
-
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircleRadius="@dimen/_40sdp"
+            app:srcCompat="@drawable/connecting" />
 
 
         <androidx.appcompat.widget.AppCompatTextView

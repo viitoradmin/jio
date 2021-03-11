@@ -6,9 +6,28 @@
     <Transition
         app:constraintSetStart="@id/stepOne"
         app:constraintSetEnd="@id/stepTwo"
-        app:duration="400">
+        app:duration="200">
     </Transition>
 
+    <Transition
+        app:constraintSetStart="@id/stepTwo"
+        app:constraintSetEnd="@id/stepThree"
+        app:duration="200">
+    </Transition>
+
+
+    <Transition
+        app:constraintSetStart="@id/stepThree"
+        app:constraintSetEnd="@id/stepFour"
+        app:duration="200">
+    </Transition>
+
+
+    <Transition
+        app:constraintSetStart="@id/stepFour"
+        app:constraintSetEnd="@id/stepOne"
+        app:duration="200">
+    </Transition>
     <ConstraintSet
         android:id="@+id/stepOne">
 
@@ -51,6 +70,74 @@
             app:layout_constraintCircle="@+id/centerImage"
             app:layout_constraintCircleAngle="5"
             app:layout_constraintCircleRadius="@dimen/_320sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+        <Constraint android:id="@+id/clDevices">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@+id/tvDeviceStatus">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/stepThree">
+
+        <Constraint
+            android:id="@+id/ivBubble"
+            android:layout_width="@dimen/onboarding_bubble_size_step_three"
+            android:layout_height="@dimen/onboarding_bubble_size_step_three"
+            android:backgroundTint="@color/bubbleExpandColor"
+            android:background="@drawable/bubble_background"
+            app:layout_constraintCircle="@+id/centerImage"
+            app:layout_constraintCircleAngle="5"
+            app:layout_constraintCircleRadius="@dimen/_320sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+        <Constraint android:id="@+id/clDevices">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint android:id="@+id/tvDeviceStatus">
+            <PropertySet
+                app:applyMotionScene="false"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/stepFour">
+
+        <Constraint
+            android:id="@+id/ivBubble"
+            android:layout_width="@dimen/onboarding_bubble_size_step_four"
+            android:layout_height="@dimen/onboarding_bubble_size_step_four"
+            android:backgroundTint="@color/bubbleCollapseColor"
+            android:background="@drawable/bubble_background"
+            app:layout_constraintCircle="@+id/clSpec"
+            app:layout_constraintCircleAngle="30"
+            app:layout_constraintCircleRadius="@dimen/_90sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

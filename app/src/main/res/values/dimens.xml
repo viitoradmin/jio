@@ -4,6 +4,8 @@
 
     <dimen name="onboarding_bubble_size_step_one">@dimen/_200sdp</dimen>
     <dimen name="onboarding_bubble_size_step_two">@dimen/_600sdp</dimen>
+    <dimen name="onboarding_bubble_size_step_three">@dimen/_580sdp</dimen>
+    <dimen name="onboarding_bubble_size_step_four">@dimen/_200sdp</dimen>
 
 
     <dimen name="text_10">@dimen/_10ssp</dimen>

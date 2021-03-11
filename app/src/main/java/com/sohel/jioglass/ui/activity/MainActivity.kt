@@ -2,8 +2,10 @@ package com.sohel.jioglass.ui.activity
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.sohel.jioglass.R
@@ -30,15 +32,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         context = this@MainActivity
         init()
-
-
+        setTransitionListener()
     }
 
+    // initilization
     fun init() {
         binding.ivBubble.setOnClickListener(this)
     }
 
 
+    //
     override fun onClick(p0: View?) {
 
         when (p0?.id) {
@@ -48,7 +51,38 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
         }
+    }
 
+
+    // transition listener for Transition End Detect purpose
+    fun setTransitionListener(){
+        binding.mLayout.setTransitionListener(object : MotionLayout.TransitionListener{
+
+            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+
+                if(p1==R.id.stepTwo){
+                    binding.mLayout.fireTransition(R.id.stepTwo, R.id.stepThree)
+                }else if(p1==R.id.stepFour){
+                    binding.mLayout.fireTransition(R.id.stepFour, R.id.stepOne)
+                }
+
+
+            }
+
+            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+
+            }
+
+
+            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+
+            }
+
+
+            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+
+            }
+        })
     }
 
 
@@ -66,7 +100,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             true
         } else {
             animationCloseToSpeck()
-            binding.mLayout.fireTransition(R.id.stepTwo, R.id.stepOne)
+            binding.mLayout.fireTransition(R.id.stepThree, R.id.stepFour)
             binding.clTop.setBackgroundColor(ContextCompat.getColor(context, R.color.white))
             false
         }
